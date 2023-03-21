@@ -6,7 +6,7 @@
 /*   By: mhiguera <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 17:52:49 by mhiguera          #+#    #+#             */
-/*   Updated: 2023/03/11 19:00:58 by mhiguera         ###   ########.fr       */
+/*   Updated: 2023/03/21 19:19:06 by mhiguera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,4 +88,23 @@ int main()
 //	printf("%d", ft_count_words("   split       this for   me  !     ", ' '));
 	return 0;
 }
+*/
+/*
+ * La primera función cuenta las palabras. Se le pasa el string de palabras,
+ * y el separador (generalmente un espacio). Si los caracteres del string 
+ * coinciden con el separador antes de que haya palabras, que siga avanzando,
+ * cuando encuentre la primera letra, si el caracter no es un separador y el 
+ * caracter anterior si lo era, significa que estamos ante una nueva palabra.
+ *
+ * La segunda función libera el array, se utilizará solo cuando falle.
+ *
+ * La función principal divide el array en mini-strings separadas por el
+ * separador que le pasemos (c). Primero crea el nuevo string, que tendrá el
+ * tamaño del número de palabras que haya + el '\0'.
+ * Mientras que las palabras no se hayan terminado, si encuentro separadores
+ * que siga avanzando y que situe el nuevo inicio con j = i donde haya letra.
+ * Luego irá avanzando hasta que ya no haya letra, y eso será la primera
+ * palabra, que con substr me va a crear un substring con ese tamaño. Esto lo
+ * va a hacer todo el rato con todas las palabras porque está metido en un 
+ * bucle. Luego liberará en caso de que falle y retornará el string resultante.
 */

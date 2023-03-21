@@ -6,7 +6,7 @@
 /*   By: mhiguera <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 20:14:13 by mhiguera          #+#    #+#             */
-/*   Updated: 2023/02/27 17:29:12 by mhiguera         ###   ########.fr       */
+/*   Updated: 2023/03/20 17:25:23 by mhiguera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,7 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
+/*
+ * Voy a rellenar un string dado con nulos a través de un contador hasta la
+ * longitud de n.
+*/

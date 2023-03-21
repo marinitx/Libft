@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhiguera <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/21 19:37:42 by mhiguera          #+#    #+#             */
-/*   Updated: 2023/03/20 17:17:16 by mhiguera         ###   ########.fr       */
+/*   Created: 2023/03/16 16:37:43 by mhiguera          #+#    #+#             */
+/*   Updated: 2023/03/19 19:31:38 by mhiguera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int a)
+int	ft_lstsize(t_list *lst)
 {
-	if (a > 31 && a <= 126)
-		return (1);
-	else
-		return (0);
+	int	i;
+
+	i = 0;
+	while (lst != '\0')
+	{
+		lst = lst->next;
+		i++;
+	}
+	return (i);
 }
-/*int main(void)
-{
-	printf("%d", ft_isprint(123));
-	printf("%c%d", '\n', isprint(123));
-	return (0);
-}*/
 /*
- * Si es un caracter imprimible de ASCII retorna 1, sino retorna 0.
+ * Creo un "strlen" de nodos. Para eso, con un contador que se va sumando en 
+ * el while, cuento la cantidad de nodos. La lista irá avanzando con el puntero
+ * a "next" que se quedará guardada como nueva posición en la lista.
 */

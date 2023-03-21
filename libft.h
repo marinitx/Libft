@@ -6,7 +6,7 @@
 /*   By: mhiguera <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 21:15:45 by mhiguera          #+#    #+#             */
-/*   Updated: 2023/03/11 16:31:00 by mhiguera         ###   ########.fr       */
+/*   Updated: 2023/03/19 19:20:19 by mhiguera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,11 @@
 # include <stdlib.h>
 # include <ctype.h>
 
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 int		ft_isalpha(int a);
 int		ft_isalnum(int a);
 int		ft_isascii(int a);
@@ -52,4 +57,13 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
+t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+int		ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstdelone(t_list *lst, void (*del)(void*));
+void	ft_lstclear(t_list **lst, void (*del)(void*));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 #endif

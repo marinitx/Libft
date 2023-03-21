@@ -6,7 +6,7 @@
 /*   By: mhiguera <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 16:27:51 by mhiguera          #+#    #+#             */
-/*   Updated: 2023/02/20 17:21:44 by mhiguera         ###   ########.fr       */
+/*   Updated: 2023/03/20 17:19:05 by mhiguera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,7 @@ int	ft_strlen(const char *str)
 	printf("%c%d", '\n', ft_strlen(str));
 	return (0);
 }*/
+/*
+ * Dado un string, iterando un while con un contador que se va sumando, 
+ * retorna el valor del contador cuando se ha terminado el string.
+*/

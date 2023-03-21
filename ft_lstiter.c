@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhiguera <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/21 19:37:42 by mhiguera          #+#    #+#             */
-/*   Updated: 2023/03/20 17:17:16 by mhiguera         ###   ########.fr       */
+/*   Created: 2023/03/19 18:20:46 by mhiguera          #+#    #+#             */
+/*   Updated: 2023/03/19 19:43:52 by mhiguera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int a)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (a > 31 && a <= 126)
-		return (1);
-	else
-		return (0);
+	while (lst != '\0')
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
 }
-/*int main(void)
-{
-	printf("%d", ft_isprint(123));
-	printf("%c%d", '\n', isprint(123));
-	return (0);
-}*/
 /*
- * Si es un caracter imprimible de ASCII retorna 1, sino retorna 0.
+ * Mientras que no se haya acabado la lista, quiero que vaya aplicando la
+ * función f al content de cada nodo. Avanzaré de nodo situándome en la
+ * posición next.
 */

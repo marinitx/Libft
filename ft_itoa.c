@@ -6,7 +6,7 @@
 /*   By: mhiguera <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 19:42:11 by mhiguera          #+#    #+#             */
-/*   Updated: 2023/03/07 18:01:24 by mhiguera         ###   ########.fr       */
+/*   Updated: 2023/03/21 19:39:02 by mhiguera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,22 @@ int main()
 	printf("%s", ft_itoa(n));
 	return 0;
 }
+*/
+/*
+ * La primera función me dice cuánto mide el int que me han pasado. Para eso, 
+ * primero mira si es un número negativo o positivo, si es negativo que lo
+ * convierta en positivo y que avance el contador de la i. Mientras que sea un
+ * número de dos cifras o más, que lo divida entre 10 hasta que sea de 1 cifra.
+ * Le va a añadir también al contador que es lo que voy a retornar.
+ *
+ * La segunda función convierte el número en positivo.
+ *
+ * La función principal convierte un int que me han pasado a un char.
+ * Para eso, primero comprueba su signo llamando a la segunda función. Luego
+ * crea el string del tamaño que me ha devuelto la primera función.
+ * Después, comprueba casos raros y luego, con el contador al máximo de tamaño
+ * del string, que vaya retrocediendo haciendo el módulo de cada cifra entre 10
+ * y sumándole 48 (ascii), y dividiendo entre 10 para retroceder de número.
+ * Finalmente, si era en un principio un número negativo, ahora en la posición
+ * 0 añado un -.
 */

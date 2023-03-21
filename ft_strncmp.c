@@ -6,7 +6,7 @@
 /*   By: mhiguera <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 18:50:08 by mhiguera          #+#    #+#             */
-/*   Updated: 2023/03/08 17:52:17 by mhiguera         ###   ########.fr       */
+/*   Updated: 2023/03/20 18:18:01 by mhiguera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,8 @@ int main()
 	printf("%d", ft_strncmp("abcdefgh", "abcdwxyz", 4));
 	return 0;
 }
+*/
+/*
+ * Compara los dos strings hasta n caracteres. Para eso, mientras que sean
+ * iguales, que siga avanzando y ya cuando dejen de ser iguales se comparan.
 */

@@ -6,7 +6,7 @@
 /*   By: mhiguera <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 17:11:22 by mhiguera          #+#    #+#             */
-/*   Updated: 2023/02/28 19:29:32 by mhiguera         ###   ########.fr       */
+/*   Updated: 2023/03/20 19:00:22 by mhiguera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,7 @@ char	*ft_strdup(const char *s1)
 	str[j] = '\0';
 	return (str);
 }
+/*
+ * Creo un nuevo string reservando memoria con calloc, y con un bucle voy a 
+ * copiarle los caracteres de s1 en mi nuevo strng, finalizandolo con un NULL.
+*/

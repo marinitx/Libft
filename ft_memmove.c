@@ -6,7 +6,7 @@
 /*   By: mhiguera <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 18:20:21 by mhiguera          #+#    #+#             */
-/*   Updated: 2023/03/11 17:58:42 by mhiguera         ###   ########.fr       */
+/*   Updated: 2023/03/20 17:29:50 by mhiguera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,12 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 		while (len-- > 0)
 			((char *)dest)[len] = ((char *)src)[len];
 	else
-		while (i < len)
 	{
-		((char *)dest)[i] = ((char *)src)[i];
-		i++;
+		while (i < len)
+		{
+			((char *)dest)[i] = ((char *)src)[i];
+			i++;
+		}
 	}
 	return (dest);
 }
@@ -42,3 +44,9 @@ int main()
 //	write(1, dest, 22);
 	return 0;
 }*/
+/*
+ * Memmove va a copiar al igual que memcpy cada caracter del string src en el
+ * string dest a través de un contador que será igual para ambos strings, pero
+ * como diferencia, memmove si soporta el overlap, es decir, como un tampón de
+ * clonar en photoshop.
+*/

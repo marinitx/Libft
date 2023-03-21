@@ -6,7 +6,7 @@
 /*   By: mhiguera <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 17:06:54 by mhiguera          #+#    #+#             */
-/*   Updated: 2023/02/27 17:55:19 by mhiguera         ###   ########.fr       */
+/*   Updated: 2023/03/20 17:52:29 by mhiguera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,3 +20,7 @@ int	ft_toupper(int ch)
 	}
 	return (ch);
 }
+/*
+ * Dada una letra minúscula, retorna una letra mayúscula según los valores de
+ * ASCII.
+*/

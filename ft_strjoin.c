@@ -6,7 +6,7 @@
 /*   By: mhiguera <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 20:31:47 by mhiguera          #+#    #+#             */
-/*   Updated: 2023/03/03 17:25:45 by mhiguera         ###   ########.fr       */
+/*   Updated: 2023/03/21 18:56:22 by mhiguera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,11 @@ int main()
 	printf("%s", ft_strjoin("manolo", "pepe"));
 	return 0;
 }
+*/
+/*
+Reserva (con malloc(3)) y devuelve una nueva string, formada por la
+concatenación de ’s1’ y ’s2’.
+
+Entonces creo un nuevo string y voy copiándole a mi nuevo string el string s1.
+Luego, s3 va a seguir avanzando y se va a ir copiando s2 desde el inicio.
 */

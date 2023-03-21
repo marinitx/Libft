@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhiguera <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/21 19:37:42 by mhiguera          #+#    #+#             */
-/*   Updated: 2023/03/20 17:17:16 by mhiguera         ###   ########.fr       */
+/*   Created: 2023/03/16 17:34:58 by mhiguera          #+#    #+#             */
+/*   Updated: 2023/03/17 17:00:36 by mhiguera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int a)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	if (a > 31 && a <= 126)
-		return (1);
+	t_list	*node;
+
+	if (*lst == NULL)
+		*lst = new;
 	else
-		return (0);
+	{
+		node = ft_lstlast(*(lst));
+		node->next = new;
+	}
 }
-/*int main(void)
-{
-	printf("%d", ft_isprint(123));
-	printf("%c%d", '\n', isprint(123));
-	return (0);
-}*/
 /*
- * Si es un caracter imprimible de ASCII retorna 1, sino retorna 0.
+Si la lista está vacía significa que la lista ya es el final de la lista.
+Si no, quiero que me mire cuál es el último nodo de la lista con ft_lstlast y
+que lo guarde en node. El puntero next lo llevaré a new para que así new sea el
+último.
 */

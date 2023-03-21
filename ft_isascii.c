@@ -6,7 +6,7 @@
 /*   By: mhiguera <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 19:30:28 by mhiguera          #+#    #+#             */
-/*   Updated: 2023/02/27 17:32:31 by mhiguera         ###   ########.fr       */
+/*   Updated: 2023/03/20 17:16:34 by mhiguera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,7 @@ int	ft_isascii(int a)
 	printf("%c%d", '\n', isascii(21));
 	return (0);
 }*/
+/*
+ * Si es un caracter que puede ser representado como un caracter válido en
+ * ASCII, entonces retorna 1, sino retorna 0.
+*/

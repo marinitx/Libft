@@ -6,7 +6,7 @@
 /*   By: mhiguera <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 17:14:28 by mhiguera          #+#    #+#             */
-/*   Updated: 2023/03/03 17:21:59 by mhiguera         ###   ########.fr       */
+/*   Updated: 2023/03/21 19:04:46 by mhiguera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -53,3 +53,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 	printf("%s", ft_strtrim("hola feo hola", "hola"));
 	return 0;
 }*/
+/*
+ * Elimina todos los caracteres de la string ’set’ desde el principio y desde
+ * el final de ’s1’, hasta encontrar un caracter no perteneciente a ’set’. La 
+ * string resultante se devuelve con una reserva de malloc(3).
+ *
+ * La primera función comprueba si los caracteres coinciden.
+ * En la función principal, va a ir avanzando el string con start siempre que
+ * los caracteres no coincidan (comprobado en la primera función) y va a ir
+ * retrocediendo el string con end (previamente llevado a la última posición)
+ * mientras que no coincida. Finalmente crea un nuevo string resultante que
+ * en toda su longitud (start hasta end) se va a ir copiando el string original
+*/

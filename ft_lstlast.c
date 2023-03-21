@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhiguera <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/21 19:37:42 by mhiguera          #+#    #+#             */
-/*   Updated: 2023/03/20 17:17:16 by mhiguera         ###   ########.fr       */
+/*   Created: 2023/03/16 17:25:18 by mhiguera          #+#    #+#             */
+/*   Updated: 2023/03/19 19:34:55 by mhiguera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int a)
+t_list	*ft_lstlast(t_list *lst)
 {
-	if (a > 31 && a <= 126)
-		return (1);
-	else
-		return (0);
+	while ((lst != '\0') && (lst->next != '\0'))
+		lst = lst->next;
+	return (lst);
 }
-/*int main(void)
-{
-	printf("%d", ft_isprint(123));
-	printf("%c%d", '\n', isprint(123));
-	return (0);
-}*/
 /*
- * Si es un caracter imprimible de ASCII retorna 1, sino retorna 0.
+ * Mientras que no se haya acabado la lista y al menos el siguiente nodo exista
+ * mi nueva posición se establecerá en el siguiente nodo. Es decir, si estoy
+ * en una lista de 5 nodos, me pararé cuando esté en el nodo 4 (aún hay otro 
+ * nodo más) y mi nueva posición será el siguiente nodo (que será el último).
 */

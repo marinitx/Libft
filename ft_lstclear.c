@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhiguera <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/21 19:37:42 by mhiguera          #+#    #+#             */
-/*   Updated: 2023/03/20 17:17:16 by mhiguera         ###   ########.fr       */
+/*   Created: 2023/03/19 18:01:36 by mhiguera          #+#    #+#             */
+/*   Updated: 2023/03/19 19:42:24 by mhiguera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int a)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	if (a > 31 && a <= 126)
-		return (1);
-	else
-		return (0);
+	if ((!del) || (!lst))
+		return ;
+	while (*lst != '\0')
+	{
+		ft_lstdelone(*lst, del);
+		*lst = (*lst)->next;
+	}
+	(*lst) = NULL;
 }
-/*int main(void)
-{
-	printf("%d", ft_isprint(123));
-	printf("%c%d", '\n', isprint(123));
-	return (0);
-}*/
 /*
- * Si es un caracter imprimible de ASCII retorna 1, sino retorna 0.
+ * Primero compruebo los valores que me pasan, y luego mientras la lista no se
+ * acabe, que vaya liberando cada nodo. Para pasar al siguiente nodo me situaré
+ * en la posición de next. Al final el puntero de la lista debe ser NULL.
 */

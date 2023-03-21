@@ -6,7 +6,7 @@
 /*   By: mhiguera <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 18:31:13 by mhiguera          #+#    #+#             */
-/*   Updated: 2023/02/28 19:22:50 by mhiguera         ###   ########.fr       */
+/*   Updated: 2023/03/20 16:47:00 by mhiguera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,7 @@ int	ft_isalpha(int a)
 	printf("%c%d", '\n', ft_isalpha(95));
 	return 0;
 }*/
+/*
+ * Si el valor que le he pasado es una letra mayúscula o minúscula que retorne
+ * 1, sino, retorna 0.
+*/

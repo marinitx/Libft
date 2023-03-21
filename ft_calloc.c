@@ -6,7 +6,7 @@
 /*   By: mhiguera <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 19:49:03 by mhiguera          #+#    #+#             */
-/*   Updated: 2023/03/11 18:49:42 by mhiguera         ###   ########.fr       */
+/*   Updated: 2023/03/20 18:57:57 by mhiguera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,6 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(ptr, count * size);
 	return (ptr);
 }
+/*
+ * Reserva memoria con malloc y la llena de 0 con bzero.
+*/

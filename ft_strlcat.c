@@ -6,7 +6,7 @@
 /*   By: mhiguera <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 18:58:28 by mhiguera          #+#    #+#             */
-/*   Updated: 2023/03/07 20:48:47 by mhiguera         ###   ########.fr       */
+/*   Updated: 2023/03/20 17:51:06 by mhiguera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,3 +48,16 @@ int main()
     write(1, dest, 15);
 	return 0;
 }*/
+/*
+ * Strlcat añade el string src al final del string dst a lo sumo dstsize
+ * - strlen(dst) - 1, y luego va a terminar en NULL a menos que dstsize sea 0 o
+ * que el string original dst sea mayor a dstsize.
+ * i va a ser la longitud de src y j la longitud de dst. Si me pasan una
+ * longitud menor (o igual) que la longitud total del string dst, entonces
+ * me va a retornar directamente la longitud que me han pasado + la longitud
+ * del string src normal (directamente pone el src al final de dst donde
+ * termina dstsize). En el caso opuesto, crearé un nuevo contador k que se irá
+ * sumando para recorrer src y poder añadirlo al final de dst (dst de j + k).
+ * Luego lo acabo en nulo y retorno el valor de la suma entre lo que mide src 
+ * y dst.
+*/
